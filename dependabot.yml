@@ -1,0 +1,27 @@
+version: 2
+updates:
+  # Maven (Java / Kotlin Projekte)
+  - package-ecosystem: "maven"
+    directory: "/" # Root-Verzeichnis mit pom.xml
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+
+  # npm (Frontend, Node.js)
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+
+  # Dockerfiles
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
